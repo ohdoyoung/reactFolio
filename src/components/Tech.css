@@ -1,0 +1,141 @@
+.tech-section {
+ 
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+
+.skill-block {
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 460px;
+  max-width: 100%;
+  margin: 0;
+}
+
+.skill-block h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.skill-item svg {
+  margin-bottom: 0.5rem;
+}
+
+.skill-item.react svg {
+  color: #61DBFB;
+}
+
+.skill-item.js svg {
+  color: #F7DF1E;
+}
+
+.skill-item.html svg {
+  color: #E34F26;
+}
+
+.skill-item.css svg {
+  color: #1572B6;
+}
+
+.skill-item.flutter svg {
+  color: #02569B;
+}
+
+.skill-item.swift svg {
+  color: #FA7343;
+}
+
+.skill-item.python svg {
+  color: #3776AB;
+}
+
+.skill-item.java svg {
+  color: #007396;
+}
+
+.skill-item.spring svg {
+  color: #6DB33F;
+}
+
+.skill-item.tomcat svg {
+  color: #F8DC75;
+}
+
+.skill-item.flask svg {
+  color: #444;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.learn-date {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+    height: 120px;
+    
+    padding: 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 350;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    color: #eee;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
+
+.skill-description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.skill-description.inactive {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tech-section {
+    flex-direction: column;
+  }
+}

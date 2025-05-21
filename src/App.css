@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app.dark {
+  background-color: #000;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app.blue {
+  background-color: #0c1f3f;
+  color: #e0f0ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.code-snippet {
+  padding: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: monospace;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 8px;
+}
+
+.timeline {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.timeline span {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.cards-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1.2rem;
+}
+
+.card {
+  flex: 1 1 220px;
+  max-width: 240px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 400;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card.birth { background: #e74c3c; }
+.card.edu { background: #f39c12; }
+.card.contact { background: #1abc9c; }
+.card.github {
+  background: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+/* Animations */
+.fade-in {
+  animation: fadeIn 1.2s ease-in forwards;
+  opacity: 0;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.card.velog {
+  background: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
