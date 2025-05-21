@@ -69,6 +69,21 @@ const projects = [
     ]
     
   },
+  {
+    id: 'portfolio',
+    title: '✌️ Portfolio Site',
+    subtitle: 'React와 GitHub Pages로 배포한 개인 포트폴리오 웹사이트입니다.',
+    period: '2025년 5월 21일 → 개발 중',
+    stack: ['React', 'CSS', 'JavaScript', 'gh-pages'],
+    github: 'https://github.com/ohdoyoung/reactFolio',
+    notion: 'https://separated-handspring-997.notion.site/ebd/1fa253349950807b958bf25c7690a789',
+    image: process.env.PUBLIC_URL + '/assets/portfolio.png',
+    icons: [
+      <FaHtml5 className="html5" />,
+      <FaCss3Alt className="css3" />,
+      <SiFlutter className="flutter" />
+    ]
+  },
 ];
 
 function ProjectList() {
