@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaJava } from 'react-icons/fa';
 import { SiFlutter, SiSwift, SiSpringboot, SiFlask } from 'react-icons/si';
 import { DiPython } from 'react-icons/di';
 import { GrNode } from 'react-icons/gr';
 import './Tech.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Tech() {
   const [selectedFrontendSkill, setSelectedFrontendSkill] = useState(null);
   const [selectedBackendSkill, setSelectedBackendSkill] = useState(null);
+  const techSectionRef = useRef(null);
 
   const skillDescriptions = {
-    React: 'React는 바닐라 js의 대안으로 꼭 한번 공부해보고싶었던 프레임워크입니다. 빠르고 간결하게 기능들을 만들기 좋았고 트렌디한 프론트엔드개발을 경험해보고자 배우기 시작했습니다.',
+    React: 'React는 바닐라 js의 대안으로 꼭 한번 공부해보고싶었던 라이브러리입니다. 빠르고 간결하게 기능들을 만들기 좋았고 트렌디한 프론트엔드개발을 경험해보고자 배우기 시작했습니다.',
     JavaScript: 'HTML/CSS의 기본적인 기능을 넘어 개발해보고 싶어 배우게 된 언어입니다. 간단해보이지만 어려운 언어라고 생각하고  공부할게 정말 많다고 느꼈습니다. 그렇지만 기본이 가장 중요하다 생각하고 여전히 공부중입니다.',
     HTML: '웹 개발에 없어서는 안될 존재입니다. 제가 무언가을 만들고싶어졌을때 가장 먼저 시작한 언어입니다. HTML을 통해 웹페이지의 구조를 만들고, CSS와 JavaScript로 디자인과 기능을 추가했습니다.',
     Flutter: '하이브리드 앱개발을 경험해보기 위해 공부했습니다. Swift와 다르게 개발속도가 빠르지만 네이티브 기능을 전부 살리지 못한다는게 아쉬웠지만 개발속도와 os에 제한없이 개발이 가능하다는 점이 매력적이였습니다.',
@@ -22,9 +27,20 @@ function Tech() {
     Flask: 'LLAMA 모델을 배포하고 기본적인 파이썬 API를 활용했습니다.',
   };
 
+  useEffect(() => {
+    gsap.from(techSectionRef.current, {
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      scrollTrigger: {
+        trigger: techSectionRef.current,
+        start: 'top 80%',
+      },
+    });
+  }, []);
+
   return (
-    
-    <section id="tech" className="tech-section fade-in">
+    <section id="tech" className="tech-section fade-in" ref={techSectionRef}>
         
       <div className="skill-block">
         <h2><span role="img" aria-label="frontend">💻</span> Frontend</h2>

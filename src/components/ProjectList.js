@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaHtml5, FaCss3Alt, FaJava, FaPython } from 'react-icons/fa';
 import { SiSpringboot, SiFlask, SiMysql, SiFlutter, SiSwift } from 'react-icons/si';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './ProjectList.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -88,11 +92,31 @@ const projects = [
 
 function ProjectList() {
   const [selected, setSelected] = useState(null);
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    if (!gridRef.current) return;
+
+    gsap.fromTo(
+      gridRef.current,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
 
   return (
     <>
       <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Projects</h2>
-      <div className="project-grid">
+      <div className="project-grid" ref={gridRef}>
         {projects.map(project => (
           <div className="project-card" key={project.id} onClick={() => setSelected(project)}>
             <img src={project.image} alt={project.title} className="project-thumb" />
