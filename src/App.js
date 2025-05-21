@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import { FaGithub } from 'react-icons/fa';
 import Tech from './components/Tech';
@@ -6,6 +7,9 @@ import ProjectList from './components/ProjectList';
 
 function App() {
   const [theme, setTheme] = useState('dark');
+  useEffect(() => {
+    document.title = '오도영의 포트폴리오';
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'blue' : 'dark');
