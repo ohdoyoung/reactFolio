@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { FaGithub } from 'react-icons/fa';
 import Tech from './components/Tech';
+import ProjectList from './components/ProjectList';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -16,10 +17,8 @@ function App() {
         <nav>
           <ul>
             <li>ABOUT</li>
-            <li>TIMELINE</li>
             <li><a href="#tech">TECH</a></li>
-            <li>PROJECTS</li>
-            <li>CAREER</li>
+            <li><a href="#projects">PROJECTS</a></li>
           </ul>
         </nav>
         <button className="theme-toggle" onClick={toggleTheme}>
@@ -66,6 +65,9 @@ function App() {
         </a>
       </section>
       <Tech />
+      <section id="projects">
+        <ProjectList />
+      </section>
     </div>
   );
 }
