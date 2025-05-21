@@ -12,7 +12,7 @@ const projects = [
     stack: ['JavaScript', 'CSS', 'HTML', 'Spring Boot', 'Flask'],
     github: 'https://github.com/202...O-Dong',
     notion: 'https://separated-handspring-997.notion.site/ebd/1d9253349950816a8791e47b9a1a06ea',    
-    image: '/assets/menu-project.png',
+    image: process.env.PUBLIC_URL + '/assets/menu-project.png',
     icons: [
       <FaHtml5 className="html5" />,
       <FaCss3Alt className="css3" />,
@@ -29,7 +29,7 @@ const projects = [
     stack: ['Swift', 'Spring Boot', 'MySQL'],
     github: 'https://github.com/ohd...dScape',
     notion: 'https://separated-handspring-997.notion.site/ebd/1d9253349950817db4dbfed654cd18a6',
-    image: '/assets/soundscape.png',
+    image: process.env.PUBLIC_URL + '/assets/soundscape.png',
     icons: [
       <SiSwift className="swift" />,
       <SiSpringboot className="springboot" />,
@@ -45,7 +45,7 @@ const projects = [
     stack: ['Swift', 'CoreData', 'CoreML', 'Python', 'SwiftUI'],
     github: 'https://github.com/ohd...abitIQ',
     notion: 'https://separated-handspring-997.notion.site/ebd/1d925334995081898b7ec556528b1475',
-    image: '/assets/habitiq.png',
+    image: process.env.PUBLIC_URL + '/assets/habitiq.png',
     icons: [
       <SiSwift className="swift" />,
       <FaPython className="python" />
@@ -60,7 +60,7 @@ const projects = [
     stack: ['Flutter', 'MySQL', 'Spring Boot', 'Python'],
     github: 'https://github.com/202...ediBot',
     notion: 'https://separated-handspring-997.notion.site/ebd/1d9253349950810b8f27ea1509787990',
-    image: '/assets/medibot.png',
+    image: process.env.PUBLIC_URL + '/assets/medibot.png',
     icons: [
       <SiFlutter className="flutter" />,
       <SiMysql className="mysql" />,

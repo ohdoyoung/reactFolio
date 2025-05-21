@@ -16,7 +16,7 @@ function App() {
       <header className="navbar">
         <nav>
           <ul>
-            <li>ABOUT</li>
+            <li><a href="#about">ABOUT</a></li>
             <li><a href="#tech">TECH</a></li>
             <li><a href="#projects">PROJECTS</a></li>
           </ul>
