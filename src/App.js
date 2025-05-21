@@ -109,7 +109,7 @@ function App() {
 {`const dev = {
   name: '오도영',
   motto: '읽기 쉬운 코드, 보기 좋은 UI',
-  stack: ['React', 'Spring Boot', 'Swift', 'Flutter','Java', 'MySQL','Git'],
+  stack: ['React', 'Spring Boot', 'Swift', 'Flutter','Java', 'MySQL']
 };`}
         </pre>
       </section>
