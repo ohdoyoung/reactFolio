@@ -85,9 +85,27 @@ function App() {
       <header className="navbar fixed-navbar">
         <nav>
           <ul>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#tech">TECH</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#about" onClick={(e) => {
+              e.preventDefault();
+              const aboutSection = document.getElementById('about');
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>ABOUT</a></li>
+            <li><a href="#tech" onClick={(e) => {
+              e.preventDefault();
+              const techSection = document.getElementById('tech');
+              if (techSection) {
+                techSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>TECH</a></li>
+            <li><a href="#projects" onClick={(e) => {
+              e.preventDefault();
+              const projectSection = document.getElementById('projects');
+              if (projectSection) {
+                projectSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>PROJECTS</a></li>
           </ul>
         </nav>
         <button className="theme-toggle" onClick={toggleTheme}>
@@ -95,7 +113,7 @@ function App() {
         </button>
       </header>
 
-      <section ref={introRef} className="intro-section fade-in">
+      <section id="about" ref={introRef} className="intro-section fade-in">
         <h1>안녕하세요.</h1>
         <p>
           사용자가 원하는 경험을 하게 도와주고<br></br>
@@ -105,7 +123,7 @@ function App() {
       </section>
 
       <section ref={codeRef} className="code-snippet slide-up">
-        <pre>
+        <pre> 
 {`const dev = {
   name: '오도영',
   motto: '읽기 쉬운 코드, 보기 좋은 UI',

@@ -106,7 +106,7 @@ function ProjectList() {
         duration: 1,
         scrollTrigger: {
           trigger: gridRef.current,
-          start: 'top 80%',
+          start: 'top 95%',
           toggleActions: 'play none none none',
         },
       }
