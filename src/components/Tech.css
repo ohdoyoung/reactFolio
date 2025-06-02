@@ -8,6 +8,7 @@
   justify-content: center;
   overflow-x: hidden;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
 .skill-block {
@@ -148,6 +149,7 @@
     padding: 2rem 1.5rem;
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: 4rem;
   }
 
   .skill-block {

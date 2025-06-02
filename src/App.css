@@ -1,3 +1,6 @@
+.tech-section {
+  margin-bottom: 6rem;
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -234,4 +237,11 @@ html, body {
 
 .theme-toggle:active {
   transform: scale(1.2) rotate(20deg);
+}
+.tech-section {
+  margin-bottom: 4rem;
+}
+
+#projects {
+  margin-top: 3rem;
 }
