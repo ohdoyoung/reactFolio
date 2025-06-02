@@ -1,5 +1,5 @@
 .tech-section {
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
 }
 body, html {
   margin: 0;
@@ -108,6 +108,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2rem;
+  padding-bottom: 3rem;
 }
 
 .card {
@@ -171,6 +172,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .tech-section {
+    margin-bottom: 8rem;
+  }
   .cards-section {
     flex-direction: column;
     align-items: center;
