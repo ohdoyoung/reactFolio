@@ -130,6 +130,7 @@
   display: block;
   position: relative;
   min-height: 280px;
+  text-align: center;
 }
 
 .skill-description {
@@ -156,6 +157,8 @@
     width: 100%;
     max-width: 100%;
     padding: 1.5rem;
+    height: auto;
+    min-height: 400px;
   }
 
   .skill-item {
@@ -163,8 +166,12 @@
   }
 
   .description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 1rem 0.5rem;
+    min-height: 320px;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+    text-align: center;
   }
 
   .skill-icons {
