@@ -1,0 +1,255 @@
+.tech-section {
+  margin-bottom: 10rem;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.app.blue {
+  background-color: #0c1f3f;
+  color: #e0f0ff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.code-snippet {
+  padding: 2.5rem 2rem; /* 상하 패딩 증가 */
+  text-align: left;
+  max-width: 600px;
+  margin: 2rem auto;     /* 상하 여백 증가 */
+  font-family: monospace;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  line-height: 1.8;       /* 줄 간격 증가 */
+  overflow-x: auto;
+}
+
+.timeline {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.timeline span {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.cards-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  flex: 1 1 220px;
+  max-width: 240px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 400;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  color: white;
+}
+
+.card.birth { background: #e74c3c; }
+.card.edu { background: #f39c12; }
+.card.contact { background: #1abc9c; }
+.card.github {
+  background: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 500;
+}
+
+.card.tistory {
+  background: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1.2s ease-in forwards;
+  opacity: 0;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-section {
+    margin-bottom: 8rem;
+  }
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .intro-section,
+  .code-snippet,
+  .timeline,
+  .cards-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .card {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .code-snippet pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul a:hover {
+  text-decoration: underline;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: inherit;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app {
+  padding-top: 80px; /* adjust based on navbar height */
+}
+
+.theme-toggle {
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:active {
+  transform: scale(1.2) rotate(20deg);
+}
+
+
+#projects {
+  margin-top: 3rem;
+}
