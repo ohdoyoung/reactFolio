@@ -163,10 +163,10 @@ function App() {
             <span>2002.06.27</span> 출생
           </li>
           <li>
-            <span>2025</span> 하이시큐어 재직중
+            <span>2025.10~</span> 하이시큐어 재직중
           </li>
           <li>
-            <span>2025</span> 보안 솔루션 엔지니어 수행
+            <span>2025.10~</span> 보안솔루션 엔지니어 업무 수행
           </li>
           <li>
             <span>Contact</span> dhehdud456@naver.com
